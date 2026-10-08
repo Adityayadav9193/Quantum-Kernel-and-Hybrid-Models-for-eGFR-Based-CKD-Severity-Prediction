@@ -1,0 +1,21 @@
+{
+  "selected_features": [
+    "bgr",
+    "bu",
+    "pot",
+    "hemo",
+    "pcv",
+    "rbcc",
+    "sg",
+    "sod"
+  ],
+  "feature_count": 8,
+  "selection_method": "Consistent rule: Stability frequency primary, RF+MI secondary",
+  "training_samples_used": 239,
+  "split_protocol": "Established Phase 3 training data (239 samples)",
+  "excluded_leakage_features": [
+    "sc",
+    "age"
+  ],
+  "experiment": "B_leakage_aware_exploratory"
+}

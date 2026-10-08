@@ -1,0 +1,174 @@
+{
+  "quantum_sensitivity": {
+    "bgr": 0.012838541666666667,
+    "bu": 0.011635416666666667,
+    "pot": 0.010505208333333333,
+    "hemo": 0.011072916666666667,
+    "pcv": 0.010328125,
+    "rbcc": 0.011505208333333333,
+    "sg": 0.013140625,
+    "sod": 0.010848958333333334
+  },
+  "error_analysis": {
+    "total_test_samples": 75,
+    "total_errors": 39,
+    "error_details": [
+      {
+        "true_class": 4,
+        "pred_class": 5
+      },
+      {
+        "true_class": 4,
+        "pred_class": 5
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 3,
+        "pred_class": 1
+      },
+      {
+        "true_class": 2,
+        "pred_class": 3
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 4,
+        "pred_class": 1
+      },
+      {
+        "true_class": 1,
+        "pred_class": 3
+      },
+      {
+        "true_class": 3,
+        "pred_class": 5
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 4,
+        "pred_class": 1
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 4,
+        "pred_class": 3
+      },
+      {
+        "true_class": 3,
+        "pred_class": 5
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 4,
+        "pred_class": 5
+      },
+      {
+        "true_class": 3,
+        "pred_class": 1
+      },
+      {
+        "true_class": 2,
+        "pred_class": 3
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 1,
+        "pred_class": 3
+      },
+      {
+        "true_class": 4,
+        "pred_class": 3
+      },
+      {
+        "true_class": 2,
+        "pred_class": 4
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 5,
+        "pred_class": 1
+      },
+      {
+        "true_class": 3,
+        "pred_class": 4
+      },
+      {
+        "true_class": 4,
+        "pred_class": 1
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      },
+      {
+        "true_class": 2,
+        "pred_class": 1
+      },
+      {
+        "true_class": 1,
+        "pred_class": 2
+      }
+    ]
+  }
+}

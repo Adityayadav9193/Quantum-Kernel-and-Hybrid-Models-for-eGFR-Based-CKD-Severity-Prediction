@@ -1,0 +1,21 @@
+{
+  "selected_features": [
+    "bu",
+    "hemo",
+    "pcv",
+    "rbcc",
+    "bgr",
+    "al",
+    "htn",
+    "sod"
+  ],
+  "feature_count": 8,
+  "selection_method": "Combined score (RF + MI + Correlation + Stability)",
+  "target_qubit_count": 8,
+  "experiments_compared": [
+    "A_full_features",
+    "B_no_leakage",
+    "C_partial_exclusion"
+  ],
+  "pca_analyzed": true
+}

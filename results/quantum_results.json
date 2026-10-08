@@ -1,0 +1,219 @@
+{
+  "phase": 6,
+  "model": "VQC",
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit-machine-learning": "0.9.1",
+    "qiskit-algorithms": "NOT INSTALLED"
+  },
+  "circuit_config": {
+    "num_qubits": 8,
+    "feature_map": "ZZFeatureMap (zz_feature_map function)",
+    "feature_map_reps": 1,
+    "feature_map_depth_decomposed": 41,
+    "feature_map_parameters": 8,
+    "ansatz": "n_local (ry, CX, linear entanglement)",
+    "ansatz_reps": 1,
+    "ansatz_depth_decomposed": 9,
+    "ansatz_parameters": 16,
+    "combined_depth_approx": 50,
+    "simulator": "StatevectorSampler (exact; no shot noise)"
+  },
+  "training_config": {
+    "optimizer": "COBYLA",
+    "max_iter": 30,
+    "loss": "cross_entropy",
+    "random_seed": 42,
+    "training_samples": 239,
+    "validation_samples": 60,
+    "test_samples": 75,
+    "training_time_seconds": 52.24
+  },
+  "experiment": {
+    "dataset": "ckd_egfr_categories_observed_only.csv",
+    "total_samples": 374,
+    "features": [
+      "bgr",
+      "bu",
+      "pot",
+      "hemo",
+      "pcv",
+      "rbcc",
+      "sg",
+      "sod"
+    ],
+    "excluded": [
+      "sc",
+      "age"
+    ],
+    "target": "egfr_category (1-5, exploratory \u2014 not clinical CKD stages)",
+    "split": "239/60/75 (identical to Phases 3-5)"
+  },
+  "val_results": {
+    "accuracy": 0.36666666666666664,
+    "macro_f1": 0.19404761904761902,
+    "weighted_f1": 0.24444444444444444,
+    "confusion_matrix": [
+      [
+        13,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        6,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class_precision": [
+      0.40625,
+      0.32142857142857145,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_class_recall": [
+      0.8125,
+      0.6428571428571429,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_class_f1": [
+      0.5416666666666666,
+      0.42857142857142855,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "test_results": {
+    "accuracy": 0.21333333333333335,
+    "macro_f1": 0.112966476913346,
+    "weighted_f1": 0.1435125448028674,
+    "confusion_matrix": [
+      [
+        9,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        6,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class_precision": [
+      0.21951219512195122,
+      0.20588235294117646,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_class_recall": [
+      0.42857142857142855,
+      0.4117647058823529,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_class_f1": [
+      0.2903225806451613,
+      0.27450980392156865,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "loss_history": [
+    17.310169,
+    17.307837,
+    17.31161,
+    17.308523,
+    17.310854,
+    17.307999,
+    17.30986,
+    17.309169,
+    17.309315,
+    17.302526,
+    17.304152,
+    17.304313,
+    17.304257,
+    17.300983,
+    17.305228,
+    17.299357,
+    17.301767,
+    17.309127,
+    17.305575,
+    17.305491,
+    17.303471,
+    17.306692,
+    17.300447,
+    17.307524,
+    17.301538,
+    17.303701,
+    17.302162,
+    17.29951,
+    17.303288,
+    17.304506
+  ],
+  "leakage_checks_passed": true,
+  "classical_baseline_val_macro_f1": 0.4109,
+  "classical_baseline_test_macro_f1": 0.4468,
+  "disclaimers": [
+    "No quantum advantage is claimed.",
+    "Results are not clinically validated.",
+    "eGFR categories are exploratory labels, not confirmed CKD stages.",
+    "Experiment uses a statevector simulator (not real quantum hardware)."
+  ]
+}

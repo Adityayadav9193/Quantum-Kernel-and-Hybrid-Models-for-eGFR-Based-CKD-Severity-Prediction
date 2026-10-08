@@ -1,0 +1,9 @@
+UCI Chronic Kidney Disease Dataset Metadata
+============================================================
+
+UCI ID: 336
+Name: Chronic Kidney Disease
+Abstract: This dataset can be used to predict the chronic kidney disease and it can be collected from the hospital nearly 2 months of period.
+
+Features: 24
+Targets: 1
