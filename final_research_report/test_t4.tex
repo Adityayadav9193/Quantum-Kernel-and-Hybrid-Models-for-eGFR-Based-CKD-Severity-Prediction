@@ -1,0 +1,38 @@
+\documentclass{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,multirow,tabularx}
+
+\begin{document}
+
+\begin{table*}[t]
+\centering
+\caption{Master Consolidated Benchmark Results: 5-Class KDIGO vs. 3-Class Triage Formulations ($N = 374$, 25 Outer Test Folds)}
+\label{tab:master_benchmark}
+\renewcommand{\arraystretch}{1.04}
+\footnotesize
+\begin{tabularx}{\textwidth}{lXccccc}
+\toprule
+\textbf{Target Task} & \textbf{Model Architecture} & \textbf{QWK [95\% CI]} & \textbf{Macro-F1 [95\% CI]} & \textbf{Accuracy} & \textbf{MAE} & \textbf{Within $\pm 1$ [\%]} \\
+\midrule
+\multirow{7}{*}{\textbf{5-Class KDIGO}} 
+& Logistic Regression (L2) & 0.8021 [0.788, 0.815] & \textbf{0.5419} [0.523, 0.559] & \textbf{54.2\%} & 0.551 & 92.6\% \\
+& Logistic Regression (ElasticNet) & 0.8029 [0.789, 0.816] & 0.5414 [0.524, 0.558] & 54.0\% & 0.551 & 92.6\% \\
+& SVM-RBF (Calibrated) & 0.7885 [0.775, 0.801] & 0.4434 [0.431, 0.455] & 47.2\% & 0.637 & 90.6\% \\
+& Balanced Random Forest & 0.8121 [0.803, 0.822] & 0.4963 [0.472, 0.521] & 49.9\% & 0.579 & 93.3\% \\
+& HistGradientBoosting (Balanced) & 0.8147 [0.805, 0.826] & 0.4985 [0.481, 0.520] & 50.0\% & 0.576 & 93.4\% \\
+& \textbf{Continuous Log-eGFR Regressor} & \textbf{0.8204} [0.811, 0.830] & 0.5236 [0.502, 0.546] & 51.0\% & \textbf{0.549} & \textbf{95.2\%} \\
+& Calibrated Soft-Voting Ensemble & 0.8068 [0.797, 0.816] & 0.5087 [0.496, 0.522] & 51.0\% & 0.577 & 92.8\% \\
+\midrule
+\multirow{7}{*}{\textbf{3-Class Triage}} 
+& Logistic Regression (L2) & 0.8208 [0.803, 0.839] & 0.7393 [0.716, 0.764] & 77.8\% & 0.235 & 98.8\% \\
+& Logistic Regression (ElasticNet) & 0.8253 [0.808, 0.843] & 0.7413 [0.719, 0.765] & 78.0\% & 0.231 & 98.9\% \\
+& SVM-RBF (Calibrated) & 0.8098 [0.791, 0.828] & 0.7130 [0.691, 0.735] & 77.3\% & 0.245 & 98.2\% \\
+& Balanced Random Forest & 0.8342 [0.821, 0.848] & 0.7322 [0.715, 0.750] & 78.1\% & 0.228 & 99.1\% \\
+& HistGradientBoosting (Balanced) & 0.8261 [0.817, 0.836] & 0.7075 [0.697, 0.719] & 77.2\% & 0.240 & 98.9\% \\
+& \textbf{Continuous Log-eGFR Regressor} & \textbf{0.8563} [0.843, 0.871] & \textbf{0.7701} [0.752, 0.790] & \textbf{81.5\%} & \textbf{0.196} & \textbf{98.9\%} \\
+& Calibrated Soft-Voting Ensemble & 0.8389 [0.834, 0.844] & 0.7444 [0.740, 0.749] & 78.9\% & 0.220 & 99.1\% \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\end{document}

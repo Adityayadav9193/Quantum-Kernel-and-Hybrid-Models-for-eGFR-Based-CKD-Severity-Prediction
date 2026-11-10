@@ -1,0 +1,549 @@
+{
+  "part1_formulations": {
+    "Multinomial Logistic Regression": {
+      "macro_f1": 0.5343515518451063,
+      "macro_f1_std": 0.0679791376204012,
+      "qwk": 0.7867032772912058,
+      "qwk_std": 0.04418345700726798,
+      "mae": 0.5820000000000001,
+      "mae_std": 0.0841777392993297,
+      "within_1_acc": 0.9083389830508473,
+      "within_1_acc_std": 0.024742940271926805
+    },
+    "Continuous Log-eGFR Regression + Binning": {
+      "macro_f1": 0.4912990382793819,
+      "macro_f1_std": 0.06154984836881442,
+      "qwk": 0.7864160877490995,
+      "qwk_std": 0.03264763564358934,
+      "mae": 0.5907570621468927,
+      "mae_std": 0.06508025918308763,
+      "within_1_acc": 0.9364180790960451,
+      "within_1_acc_std": 0.02276631749807145
+    },
+    "Cumulative-Link Ordinal LR": {
+      "macro_f1": 0.3803207873023508,
+      "macro_f1_std": 0.054393098693416846,
+      "qwk": 0.779463789550921,
+      "qwk_std": 0.04721682966467593,
+      "mae": 0.6955706214689265,
+      "mae_std": 0.08134379696060157,
+      "within_1_acc": 0.849536723163842,
+      "within_1_acc_std": 0.027755801195138298
+    }
+  },
+  "part2_3class_coarsening": {
+    "counts_5_class": {
+      "1": 102,
+      "2": 84,
+      "3": 74,
+      "4": 52,
+      "5": 62
+    },
+    "counts_3_class": {
+      "1": 186,
+      "2": 74,
+      "3": 114
+    },
+    "5-Class (G1, G2, G3, G4, G5)": {
+      "macro_f1": 0.5343515518451063,
+      "macro_f1_std": 0.0679791376204012,
+      "accuracy": 0.5277062146892656,
+      "accuracy_std": 0.06467541953318545,
+      "qwk": 0.7867032772912058,
+      "qwk_std": 0.04418345700726798,
+      "per_class_recalls": [
+        0.4682352941176471,
+        0.42175824175824184,
+        0.5690909090909091,
+        0.4877777777777777,
+        0.748
+      ]
+    },
+    "3-Class (G1-2, G3, G4-5)": {
+      "macro_f1": 0.7336954562617582,
+      "macro_f1_std": 0.05192456875532558,
+      "accuracy": 0.7698418079096045,
+      "accuracy_std": 0.05128377022583344,
+      "qwk": 0.8115069077980412,
+      "qwk_std": 0.04866616744634224,
+      "per_class_recalls": [
+        0.84,
+        0.6475757575757577,
+        0.7340350877192983
+      ]
+    }
+  },
+  "part3_features_and_imputation": {
+    "imputation_benchmark": {
+      "Simple (Median/Mode)": {
+        "macro_f1": 0.4583680403631894,
+        "macro_f1_std": 0.05322537081698774,
+        "qwk": 0.7775265693431537,
+        "qwk_std": 0.036178699323664555
+      },
+      "Iterative (MICE)": {
+        "macro_f1": 0.46195670077375084,
+        "macro_f1_std": 0.05102289153649985,
+        "qwk": 0.7802224052621647,
+        "qwk_std": 0.02767436249027431
+      },
+      "KNNImputer (k=5)": {
+        "macro_f1": 0.4674876607925842,
+        "macro_f1_std": 0.0518917670512016,
+        "qwk": 0.7817606610292949,
+        "qwk_std": 0.03425918961100677
+      }
+    },
+    "permutation_importance": {
+      "bu": {
+        "importance_mean": 0.24914301619807913,
+        "importance_std": 0.02250679968011028
+      },
+      "htn": {
+        "importance_mean": 0.055410610846222806,
+        "importance_std": 0.015362840493940799
+      },
+      "bgr": {
+        "importance_mean": 0.04897884421876699,
+        "importance_std": 0.018158552592414546
+      },
+      "al": {
+        "importance_mean": 0.04267416033692898,
+        "importance_std": 0.01246733389205305
+      },
+      "pcv": {
+        "importance_mean": 0.042086479836921695,
+        "importance_std": 0.018220385105435992
+      },
+      "pe": {
+        "importance_mean": 0.039873048056923543,
+        "importance_std": 0.009529985661450822
+      },
+      "hemo": {
+        "importance_mean": 0.03349284798087178,
+        "importance_std": 0.011130265957892193
+      },
+      "wbcc": {
+        "importance_mean": 0.028760782019195175,
+        "importance_std": 0.01730315008584621
+      },
+      "rbcc": {
+        "importance_mean": 0.028384001842060157,
+        "importance_std": 0.013453543633480657
+      },
+      "appet": {
+        "importance_mean": 0.01768275437876161,
+        "importance_std": 0.010128168316047135
+      },
+      "pc": {
+        "importance_mean": 0.017060043000338487,
+        "importance_std": 0.008298414484111926
+      },
+      "bp": {
+        "importance_mean": 0.01703873647602875,
+        "importance_std": 0.014551635025122783
+      },
+      "pot": {
+        "importance_mean": 0.016749604709188272,
+        "importance_std": 0.010302670320443718
+      },
+      "su": {
+        "importance_mean": 0.01641959730765663,
+        "importance_std": 0.007911782784099439
+      },
+      "pcc": {
+        "importance_mean": 0.015038129347798856,
+        "importance_std": 0.008439265383152454
+      },
+      "cad": {
+        "importance_mean": 0.01237138601621347,
+        "importance_std": 0.005857695997452656
+      },
+      "dm": {
+        "importance_mean": 0.012356174169748001,
+        "importance_std": 0.009100076161839566
+      },
+      "sod": {
+        "importance_mean": 0.009296482317686905,
+        "importance_std": 0.010881854834299036
+      },
+      "ane": {
+        "importance_mean": 0.008485792875352071,
+        "importance_std": 0.00428501322162514
+      },
+      "sg": {
+        "importance_mean": 0.008400586625558282,
+        "importance_std": 0.010708495930353841
+      },
+      "ba": {
+        "importance_mean": -0.002351402675448577,
+        "importance_std": 0.004593083830287697
+      },
+      "rbc": {
+        "importance_mean": -0.004001470873927338,
+        "importance_std": 0.00496200922878711
+      }
+    },
+    "selected_top_features": [
+      "bu",
+      "htn",
+      "bgr",
+      "al",
+      "pcv",
+      "pe",
+      "hemo",
+      "wbcc"
+    ]
+  },
+  "part4_model_zoo": {
+    "Logistic Regression (ElasticNet)": {
+      "macro_f1": 0.5467812012867703,
+      "macro_f1_std": 0.06449562561873383,
+      "qwk": 0.787370555027729,
+      "qwk_std": 0.0431956601613931,
+      "accuracy": 0.5410960451977401,
+      "accuracy_std": 0.06558108375921444,
+      "min_recall": 0.48696969696969705,
+      "per_class_recalls": [
+        0.5035294117647059,
+        0.4901098901098902,
+        0.48696969696969705,
+        0.4966666666666667,
+        0.768
+      ]
+    },
+    "Logistic Regression (L2)": {
+      "macro_f1": 0.5466048403530458,
+      "macro_f1_std": 0.06910668077072475,
+      "qwk": 0.7873280807356399,
+      "qwk_std": 0.04300072637346392,
+      "accuracy": 0.5410621468926553,
+      "accuracy_std": 0.06990875984218034,
+      "min_recall": 0.48,
+      "per_class_recalls": [
+        0.49161764705882355,
+        0.5142857142857145,
+        0.48,
+        0.4927777777777777,
+        0.768
+      ]
+    },
+    "SVM-RBF": {
+      "macro_f1": 0.5304680627220546,
+      "macro_f1_std": 0.05694136911463435,
+      "qwk": 0.7812486110575199,
+      "qwk_std": 0.045614378454620415,
+      "accuracy": 0.5203615819209041,
+      "accuracy_std": 0.056591667872101126,
+      "min_recall": 0.4402197802197802,
+      "per_class_recalls": [
+        0.47882352941176476,
+        0.4402197802197802,
+        0.5078787878787879,
+        0.5283333333333333,
+        0.704
+      ]
+    },
+    "kNN (k=7)": {
+      "macro_f1": 0.48226778330180264,
+      "macro_f1_std": 0.05575723616284527,
+      "qwk": 0.7538504829115786,
+      "qwk_std": 0.06500206467357024,
+      "accuracy": 0.49013559322033906,
+      "accuracy_std": 0.054229985384068626,
+      "min_recall": 0.3133333333333333,
+      "per_class_recalls": [
+        0.570735294117647,
+        0.3386813186813187,
+        0.5275757575757576,
+        0.3133333333333333,
+        0.6679999999999999
+      ]
+    },
+    "Random Forest": {
+      "macro_f1": 0.5114223563546585,
+      "macro_f1_std": 0.04847789941163,
+      "qwk": 0.7970288042556182,
+      "qwk_std": 0.04804359485528695,
+      "accuracy": 0.5084180790960453,
+      "accuracy_std": 0.05044346731043784,
+      "min_recall": 0.40769230769230774,
+      "per_class_recalls": [
+        0.4688235294117647,
+        0.40769230769230774,
+        0.509090909090909,
+        0.42944444444444435,
+        0.7760000000000001
+      ]
+    },
+    "Extra Trees": {
+      "macro_f1": 0.4715018893943659,
+      "macro_f1_std": 0.047154985853260875,
+      "qwk": 0.7655339300724684,
+      "qwk_std": 0.05315447693258719,
+      "accuracy": 0.4756723163841808,
+      "accuracy_std": 0.0461121014066218,
+      "min_recall": 0.3263736263736263,
+      "per_class_recalls": [
+        0.5276470588235295,
+        0.3263736263736263,
+        0.45212121212121226,
+        0.34388888888888886,
+        0.732
+      ]
+    },
+    "HistGradientBoosting": {
+      "macro_f1": 0.47520310558673445,
+      "macro_f1_std": 0.039875462081665855,
+      "qwk": 0.7767824318977933,
+      "qwk_std": 0.03867005039834077,
+      "accuracy": 0.4716271186440678,
+      "accuracy_std": 0.03990893269040584,
+      "min_recall": 0.36879120879120875,
+      "per_class_recalls": [
+        0.46176470588235297,
+        0.36879120879120875,
+        0.453939393939394,
+        0.42277777777777786,
+        0.6879999999999998
+      ]
+    },
+    "MLP (64, 32)": {
+      "macro_f1": 0.3701707301486941,
+      "macro_f1_std": 0.04800010630629316,
+      "qwk": 0.7407396821928631,
+      "qwk_std": 0.07751180896666861,
+      "accuracy": 0.4769378531073446,
+      "accuracy_std": 0.05840042133334559,
+      "min_recall": 0.02373626373626373,
+      "per_class_recalls": [
+        0.8004411764705882,
+        0.02373626373626373,
+        0.6518181818181817,
+        0.027777777777777776,
+        0.7320000000000002
+      ]
+    },
+    "Calibrated Ensemble (Top 3)": {
+      "macro_f1": 0.5385705615028261,
+      "macro_f1_std": 0.05173603784381141,
+      "qwk": 0.7986757727663235,
+      "qwk_std": 0.03845189739535658,
+      "accuracy": 0.5377514124293785,
+      "accuracy_std": 0.04924038387602228,
+      "min_recall": 0.4252747252747253,
+      "per_class_recalls": [
+        0.5354411764705882,
+        0.4252747252747253,
+        0.5181818181818181,
+        0.46,
+        0.78
+      ]
+    }
+  },
+  "part5_quantum_redesign": {
+    "original_vqc_phase6": {
+      "val_macro_f1": 0.194,
+      "test_macro_f1": 0.113
+    },
+    "original_vqc_phase7": {
+      "val_macro_f1": 0.1605,
+      "test_macro_f1": 0.13
+    },
+    "redesigned_fidelity_quantum_kernel_svc": {
+      "cv_macro_f1": 0.4407934975058013,
+      "cv_macro_f1_std": 0.03124708928706562,
+      "cv_qwk": 0.6740201671759809,
+      "cv_qwk_std": 0.056287783300503394,
+      "test_macro_f1": 0.41833333333333333,
+      "test_qwk": 0.7152777777777778,
+      "test_confusion_matrix": [
+        [
+          11,
+          8,
+          2,
+          0,
+          0
+        ],
+        [
+          7,
+          5,
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          10,
+          3,
+          2
+        ],
+        [
+          0,
+          0,
+          7,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          2,
+          2,
+          7
+        ]
+      ]
+    }
+  },
+  "part6_late_fusion_stats": {
+    "classical_only_macro_f1": 0.5205583942998149,
+    "quantum_only_macro_f1": 0.4444927448815193,
+    "weighted_average_fusion_macro_f1": 0.5229393758698662,
+    "stacking_lr_fusion_macro_f1": 0.48189739431112616,
+    "classical_only_qwk": 0.7874790819986307,
+    "weighted_average_fusion_qwk": 0.7799620072249753,
+    "wilcoxon_test_macro_f1": {
+      "statistic": 7.0,
+      "p_value": 1.0
+    },
+    "wilcoxon_test_qwk": {
+      "statistic": 5.0,
+      "p_value": 0.625
+    },
+    "paired_bootstrap_macro_f1_delta_ci": [
+      -0.03495856613614205,
+      0.03972052927624477
+    ]
+  },
+  "part7_label_noise_ablation": {
+    "sex_label_noise": {
+      "total_samples": 374,
+      "samples_changing_category": 125,
+      "percentage_changing_category": 33.42245989304813,
+      "unambiguous_samples": 249
+    },
+    "ablation_table": [
+      {
+        "target_definition": "Male Assumption (Original)",
+        "sample_size": 374,
+        "feature_set": "Core 8 Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.5492275768661059,
+        "macro_f1_std": 0.03488655759203642,
+        "qwk": 0.8052437534316509,
+        "qwk_std": 0.020022474192622798
+      },
+      {
+        "target_definition": "Male Assumption (Original)",
+        "sample_size": 374,
+        "feature_set": "Core 8 Features",
+        "model": "Random Forest",
+        "macro_f1": 0.5070736642653867,
+        "macro_f1_std": 0.03241373948628012,
+        "qwk": 0.8063137135018454,
+        "qwk_std": 0.012600602636420573
+      },
+      {
+        "target_definition": "Male Assumption (Original)",
+        "sample_size": 374,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.5543799877466637,
+        "macro_f1_std": 0.03357812203874048,
+        "qwk": 0.7956545516716009,
+        "qwk_std": 0.03901235446856649
+      },
+      {
+        "target_definition": "Male Assumption (Original)",
+        "sample_size": 374,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Random Forest",
+        "macro_f1": 0.5299476876100508,
+        "macro_f1_std": 0.039668927824333,
+        "qwk": 0.826781485483673,
+        "qwk_std": 0.021457147125423997
+      },
+      {
+        "target_definition": "Sex-Averaged Midpoint Target",
+        "sample_size": 374,
+        "feature_set": "Core 8 Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.4798186890061821,
+        "macro_f1_std": 0.05870385888409991,
+        "qwk": 0.7877535444345705,
+        "qwk_std": 0.045576157141870015
+      },
+      {
+        "target_definition": "Sex-Averaged Midpoint Target",
+        "sample_size": 374,
+        "feature_set": "Core 8 Features",
+        "model": "Random Forest",
+        "macro_f1": 0.4980082667507363,
+        "macro_f1_std": 0.04828614579141454,
+        "qwk": 0.8143921082416318,
+        "qwk_std": 0.03681690330050727
+      },
+      {
+        "target_definition": "Sex-Averaged Midpoint Target",
+        "sample_size": 374,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.5002353449832584,
+        "macro_f1_std": 0.02778355477227644,
+        "qwk": 0.784319004110254,
+        "qwk_std": 0.05599928222014192
+      },
+      {
+        "target_definition": "Sex-Averaged Midpoint Target",
+        "sample_size": 374,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Random Forest",
+        "macro_f1": 0.47537972836693293,
+        "macro_f1_std": 0.012511534922939344,
+        "qwk": 0.796195104945105,
+        "qwk_std": 0.016994013335187946
+      },
+      {
+        "target_definition": "Unambiguous Cohort (Concordant)",
+        "sample_size": 249,
+        "feature_set": "Core 8 Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.4632416247198855,
+        "macro_f1_std": 0.05256803253274235,
+        "qwk": 0.8029438775550176,
+        "qwk_std": 0.07282545195001337
+      },
+      {
+        "target_definition": "Unambiguous Cohort (Concordant)",
+        "sample_size": 249,
+        "feature_set": "Core 8 Features",
+        "model": "Random Forest",
+        "macro_f1": 0.4942262626262626,
+        "macro_f1_std": 0.061120815712330655,
+        "qwk": 0.8294823112419278,
+        "qwk_std": 0.06801044612166579
+      },
+      {
+        "target_definition": "Unambiguous Cohort (Concordant)",
+        "sample_size": 249,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Logistic Regression",
+        "macro_f1": 0.5006388083815081,
+        "macro_f1_std": 0.03630390645945864,
+        "qwk": 0.7897472676876541,
+        "qwk_std": 0.055521891963652745
+      },
+      {
+        "target_definition": "Unambiguous Cohort (Concordant)",
+        "sample_size": 249,
+        "feature_set": "Top 8 Expanded Features",
+        "model": "Random Forest",
+        "macro_f1": 0.48014989602150154,
+        "macro_f1_std": 0.03316424858831234,
+        "qwk": 0.8201974609676771,
+        "qwk_std": 0.07285547365858493
+      }
+    ]
+  }
+}

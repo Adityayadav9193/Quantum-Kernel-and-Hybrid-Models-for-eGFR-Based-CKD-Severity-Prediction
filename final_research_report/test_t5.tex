@@ -1,0 +1,44 @@
+\documentclass{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,multirow,tabularx}
+
+\begin{document}
+
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Experimental Extensions: Quantum Control, Late Fusion, Label Noise Sensitivity, and Theoretical Ceiling}
+\label{tab:extensions_benchmark}
+\renewcommand{\arraystretch}{1.04}
+\footnotesize
+\begin{tabularx}{\textwidth}{lXcc}
+\toprule
+\textbf{Experimental Module} & \textbf{Model Configuration / Investigation} & \textbf{Primary Metric} & \textbf{95\% CI / Key Empirical Finding} \\
+\midrule
+\multirow{4}{*}{\textbf{Part A: Quantum Control}} 
+& Classical RBF Kernel SVC (4-PCA, $\gamma = 0.25$) & $\text{QWK} = \mathbf{0.7763}$ & $[0.7570, 0.7950]$ (Superior test generalization) \\
+& Quantum Fidelity Kernel SVC (4-qubit ZZFeatureMap) & $\text{QWK} = 0.7109$ & $[0.6895, 0.7312]$ (Inferior downstream accuracy) \\
+& Classical Kernel-Target Alignment (KTA) & $\text{KTA} = 0.1170$ & Downstream generalization superior ($\Delta\text{QWK} = +0.065$) \\
+& Quantum Kernel-Target Alignment (KTA) & $\text{KTA} = \mathbf{0.1957}$ & Higher Hilbert alignment, but lower test generalization \\
+\midrule
+\multirow{5}{*}{\textbf{Part B: Late Fusion ($B = 2000$)}} 
+& Classical ElasticNet LR (Pooled Out-of-Fold) & $\text{Macro-F1} = \mathbf{0.5590}$ & $\text{QWK} = \mathbf{0.8099}$ \\
+& Quantum Fidelity Kernel SVC (Pooled Out-of-Fold) & $\text{Macro-F1} = 0.4195$ & $\text{QWK} = 0.7109$ \\
+& Weighted Late Fusion ($0.75\text{C} + 0.25\text{Q}$) & $\text{Macro-F1} = 0.5109$ & $\text{QWK} = 0.8042$ \\
+& Stacking Meta-Classifier (Multinomial LR on OOF) & $\text{Macro-F1} = 0.5357$ & $\text{QWK} = 0.7981$ \\
+& Paired Bootstrap Delta ($\Delta = \text{Fusion} - \text{Classical}$) & $\Delta\text{F1} = -0.0481$ & 95\% CI: [$-0.0918, -0.0046$] ($p < 0.05$ degradation); $\Delta\text{QWK}$ spans 0 \\
+\midrule
+\multirow{4}{*}{\textbf{Part C: Label Sensitivity}} 
+& Male-Trained Model on Male Target & $\text{Accuracy} = 54.01\%$ & $\text{QWK} = 0.8029$ \\
+& Male-Trained Model on Midpoint Target & $\text{Accuracy} = 51.87\%$ & $\text{QWK} = \mathbf{0.7931}$ (Robust surrogate generalization) \\
+& Sensitivity Across Sex Assumptions & 125/374 Switch (33.4\%) & Boundary shifts without model collapse \\
+& Artificially Filtered Concordant Cohort ($N = 249$) & $\text{Accuracy} = 50.06\%$ & $\text{QWK} = 0.8029$ (Creatinine-selection bias; rejected) \\
+\midrule
+\multirow{3}{*}{\textbf{Part D: Theoretical Ceiling}} 
+& Primary Leakage-Free Model (LR ElasticNet) & $\text{QWK} = 0.8029$ & $\text{Macro-F1} = 0.5414$ \\
+& Upper-Bound Ceiling Model ($S_{\text{cr}}$ + Age Allowed) & $\text{QWK} = \mathbf{0.8802}$ & $\text{Macro-F1} = \mathbf{0.6612}$ (Accuracy = 65.26\%) \\
+& Relative Ceiling Attained by Leak-Free Model & \multicolumn{2}{c}{\textbf{93.2\% of Maximum Theoretical Attainable Ceiling on Cohort}} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\end{document}

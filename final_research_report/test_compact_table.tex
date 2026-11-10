@@ -1,0 +1,92 @@
+\documentclass{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,multirow,tabularx}
+
+\begin{document}
+\title{Test Document}
+\author{Author}
+\maketitle
+
+Paragraph 0: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 0: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 0: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 1: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 1: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 1: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 2: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 2: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 2: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 3: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 3: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 3: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 4: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 4: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 4: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 5: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 5: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 5: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 6: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 6: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 6: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 7: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 7: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 7: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 8: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 8: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 8: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+Paragraph 9: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 9: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.Paragraph 9: This is some sample text to fill up the page. Chronic kidney disease affects millions of patients globally and requires early diagnostic triage using leakage free machine learning.
+
+\begin{table*}[t]
+\centering
+\caption{Comparative Summary of Prior Studies on Machine Learning for CKD Prediction vs. This Work}
+\label{tab:lit_comparison}
+\renewcommand{\arraystretch}{1.02}
+\footnotesize
+\begin{tabularx}{\textwidth}{p{2.8cm}p{2.2cm}p{1.8cm}p{2.0cm}p{2.2cm}X}
+\toprule
+\textbf{Study} & \textbf{Cohort} & \textbf{Target} & \textbf{Validation} & \textbf{Leakage Status} & \textbf{Key Findings / Methodological Limitations} \\
+\midrule
+Almansour et al. [8] & UCI CKD (400) & Binary & 70/30 Holdout & Critical ($S_{\text{cr}}$ kept) & 97.5\% Acc. via ANN; cannot stage; trivial threshold rule. \\
+Senan et al. [9] & UCI CKD (400) & Binary & 10-fold CV & Global Preproc. & 98.2\% Acc. via SVM; imputation executed prior to split. \\
+Debal \& Sitote [10] & UCI CKD (400) & Binary & 5-fold CV & Critical ($S_{\text{cr}}$ kept) & 99.1\% Acc. using RF; exploited direct creatinine cutoff. \\
+Chen et al. [11] & EHR ($N = 1,200$) & 5-Stage & 10-fold CV & Partial ($S_{\text{cr}}$ kept) & 82.4\% Acc.; predicted eGFR stages with creatinine as input. \\
+Ravizza et al. [12] & EHR ($N = 10,450$) & Decline & Patient-level & Leakage-Free & C-index 0.79 for rapid progression; requires EHR history. \\
+Schuld et al. [13] & Synthetic & Binary & Holdout & Synthetic Data & Formalized quantum kernel embedding; no clinical test. \\
+Havlicek et al. [14] & Supercond. QPU & 2-Qubit & Holdout & Synthetic Data & Demonstrated ZZ-feature map kernel on toy classification. \\
+\textbf{This Work} & \textbf{UCI ($N = 374$)} & \textbf{5- \& 3-Class} & \textbf{Nested $5 \times 5$} & \textbf{Strictly Leak-Free} & \textbf{0.8204 / 0.8563 QWK; quantum negative result; SHAP.} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+Paragraph 0: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 0: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 0: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 1: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 1: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 1: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 2: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 2: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 2: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 3: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 3: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 3: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 4: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 4: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 4: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 5: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 5: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 5: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 6: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 6: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 6: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 7: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 7: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 7: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 8: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 8: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 8: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 9: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 9: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 9: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 10: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 10: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 10: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 11: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 11: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 11: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 12: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 12: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 12: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 13: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 13: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 13: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 14: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 14: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 14: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 15: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 15: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 15: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 16: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 16: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 16: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 17: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 17: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 17: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 18: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 18: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 18: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+Paragraph 19: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 19: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.Paragraph 19: This is some following text to fill up subsequent pages. We continue evaluating models on nested cross-validation protocols.
+
+\end{document}
